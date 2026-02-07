@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TECHMENTORX | Login</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* Background */
+body{
+    height:100vh;
+    background: radial-gradient(circle at top, #1b2735, #090a0f);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    color:#fff;
+}
+
+/* Login Card */
+.login-card{
+    width:370px;
+    padding:40px;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(14px);
+    border-radius:20px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.login-card:hover{
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 35px 80px rgba(0,255,255,0.35);
+}
+
+/* Title */
+.login-card h1{
+    text-align:center;
+    margin-bottom:8px;
+    letter-spacing:1px;
+}
+
+.login-card p{
+    text-align:center;
+    font-size:13px;
+    opacity:0.8;
+    margin-bottom:35px;
+}
+
+/* Input Blocks */
+.field{
+    margin-bottom:25px;
+    position:relative;
+}
+
+.field label{
+    display:block;
+    font-size:13px;
+    margin-bottom:6px;
+    opacity:0.9;
+}
+
+.field input,
+.field select{
+    width:100%;
+    padding:12px 14px;
+    border-radius:12px;
+    border:1px solid transparent;
+    background: rgba(255,255,255,0.18);
+    color:#fff;
+    outline:none;
+    transition: all 0.4s ease;
+}
+
+.field input::placeholder{
+    color:#ddd;
+}
+
+/* Hover + Focus */
+.field input:hover,
+.field select:hover{
+    background: rgba(255,255,255,0.28);
+}
+
+.field input:focus,
+.field select:focus{
+    border-color:#00f7ff;
+    box-shadow: 0 0 15px rgba(0,247,255,0.8);
+    transform: scale(1.02);
+}
+
+/* Select fix */
+select option{
+    color:#000;
+}
+
+/* Button */
+button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:30px;
+    background: linear-gradient(90deg,#00f7ff,#4facfe);
+    color:#000;
+    font-weight:bold;
+    letter-spacing:1px;
+    cursor:pointer;
+    transition: all 0.5s ease;
+}
+
+button:hover{
+    transform: scale(1.08);
+    box-shadow: 0 0 30px rgba(0,247,255,1);
+}
+
+/* Subtle glow animation */
+@keyframes pulse {
+    0%{ box-shadow:0 0 15px rgba(0,247,255,0.4); }
+    50%{ box-shadow:0 0 30px rgba(0,247,255,0.9); }
+    100%{ box-shadow:0 0 15px rgba(0,247,255,0.4); }
+}
+
+.login-card:hover button{
+    animation: pulse 1.5s infinite;
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-card">
+    <h1>TECHMENTORX</h1>
+    <p>LLM-Based Student Monitoring System</p>
+
+    <div class="field">
+        <label>📧 Who are you?</label>
+        <input type="email" placeholder="Enter your academic email">
+    </div>
+
+    <div class="field">
+        <label>🔐 Prove it’s you</label>
+        <input type="password" placeholder="Enter your password">
+    </div>
+
+    <div class="field">
+        <label>🎓 Your role</label>
+        <select>
+            <option>Student</option>
+            <option>Teacher</option>
+        </select>
+    </div>
+
+    <button>Enter TECHMENTORX →</button>
+</div>
+
+</body>
+</html>
