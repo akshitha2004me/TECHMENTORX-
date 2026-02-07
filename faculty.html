@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Faculty Dashboard | TECHMENTORX</title>
+
+<style >
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI", sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background: linear-gradient(135deg,#020617,#0b1d2d,#020617);
+    color:#fff;
+    padding:30px;
+}
+
+/* Header */
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.header h1{font-size:28px;}
+.header p{opacity:0.7;font-size:14px;}
+
+/* Nav */
+.nav{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-bottom:30px;
+}
+
+.nav button{
+    padding:12px 22px;
+    border:none;
+    border-radius:30px;
+    font-weight:bold;
+    cursor:pointer;
+    background: linear-gradient(90deg,#facc15,#f59e0b);
+    transition:0.4s;
+}
+
+.nav button:hover{
+    transform:scale(1.12);
+    box-shadow:0 0 25px #facc15;
+}
+
+/* Section */
+.section{
+    display:none;
+    margin-top:20px;
+    padding:25px;
+    border-radius:20px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(14px);
+    box-shadow:0 20px 60px rgba(0,0,0,0.6);
+    animation: fade 0.5s ease;
+}
+
+@keyframes fade{
+    from{opacity:0;transform:translateY(10px);}
+    to{opacity:1;transform:translateY(0);}
+}
+
+.section h2{
+    margin-bottom:15px;
+}
+
+.section p{
+    opacity:0.85;
+    line-height:1.6;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <div>
+        <h1>Faculty Dashboard</h1>
+        <p>Dr. Ananya Sharma • CSE Department</p>
+    </div>
+    <p>TECHMENTORX • LLM Monitoring</p>
+</div>
+
+<div class="nav">
+    <button onclick="show('students')">Students</button>
+    <button onclick="show('performance')">Performance</button>
+    <button onclick="show('insights')">AI Insights</button>
+    <button onclick="show('alerts')">Alerts</button>
+    <button onclick="show('reports')">Reports</button>
+</div>
+
+<!-- Sections -->
+
+<div id="students" class="section">
+    <h2>👨‍🎓 Student Management</h2>
+    <p>View student profiles, roll numbers, class sections, and enrollment status.</p>
+</div>
+
+<div id="performance" class="section">
+    <h2>📊 Performance Analytics</h2>
+    <p>Subject-wise scores, attendance tracking, and class performance trends.</p>
+</div>
+
+<div id="insights" class="section">
+    <h2>🧠 LLM-Based Insights</h2>
+    <p>AI detected low engagement in Mathematics. Recommended mentoring for 5 students.</p>
+</div>
+
+<div id="alerts" class="section">
+    <h2>⚠️ Alerts & Interventions</h2>
+    <p>3 students flagged due to low attendance and declining performance.</p>
+</div>
+
+<div id="reports" class="section">
+    <h2>📁 Reports</h2>
+    <p>Download attendance, performance, and AI-generated insight reports.</p>
+</div>
+
+<script>
+function show(id){
+    document.querySelectorAll('.section').forEach(s=>{
+        s.style.display='none';
+    });
+    document.getElementById(id).style.display='block';
+}
+</script>
+
+</body>
+</html>
